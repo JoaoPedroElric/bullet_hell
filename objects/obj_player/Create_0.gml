@@ -1,2 +1,4 @@
-move_speed = 2;
+move_speed = 4;
 life = 100;
+fire_cooldown = 0; 
+fire_rate = 15; 
