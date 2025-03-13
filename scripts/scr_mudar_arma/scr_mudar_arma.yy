@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scp_mudar_arma",
+  "%Name":"scr_mudar_arma",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scp_mudar_arma",
+  "name":"scr_mudar_arma",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

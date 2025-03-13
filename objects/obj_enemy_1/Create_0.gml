@@ -1,3 +1,3 @@
 
-life = 10
-spd = 2;
+life = 10;
+spd = 1;
