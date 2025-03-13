@@ -12,6 +12,10 @@ if(key_left) x = x-move_speed;
 
 if(key_right) x = x+move_speed;
 
+with(my_weapon) {
+	weapon_dir = point_direction(x,y,mouse_x,mouse_y);
+}
+
 fire_cooldown = approach(fire_cooldown, 0, 1);
 
 if(key_fire && fire_cooldown == 0) {
