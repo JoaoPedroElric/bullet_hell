@@ -16,12 +16,16 @@ if(instance_exists(weapon_id)){
 			return false;	
 		}
 		
-		var fire = instance_create_layer(weapon_x+lengthdir_x(14,weapon_dir),weapon_y+lengthdir_y(14,weapon_dir), "bullet",obj_bullet);
-		fire.sprite_index = proj;
-		fire.speed = proj_spd;
-		fire.image_angle = weapon_dir;
-		fire.direction = weapon_dir;
-		fire.damage = proj_damage; 
+		for(var i = 0; i < proj_count; i++) {
+			var fire = instance_create_layer(weapon_x+lengthdir_x(14,weapon_dir),weapon_y+lengthdir_y(14,weapon_dir), "bullet",obj_bullet);
+			fire.sprite_index = proj;
+			var dir = weapon_dir + (proj_disp * i);
+			fire.speed = proj_spd;
+			fire.image_angle = dir;
+			fire.direction = dir;
+			fire.damage = proj_damage;
+		}
+		
 		can_shoot = false;
 		alarm[0] = proj_delay;
 				
@@ -38,10 +42,7 @@ if(instance_exists(weapon_id)){
 		
 		mudar_arma(self,0);	
 		
-		show_debug_message("Proj: " + string(proj));
-		show_debug_message("Proj Speed: " + string(proj_spd));
-		show_debug_message("Proj Damage: " + string(proj_damage));
-		show_debug_message("Proj Delay: " + string(proj_delay));
+
 	}
 	
 	function weapon_pickup() {
