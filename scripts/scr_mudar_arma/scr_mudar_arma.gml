@@ -9,5 +9,7 @@ function mudar_arma(_id,index){
 	_id.proj_delay = map[? "proj_delay"];
 	_id.automatic = map[? "automatic"];
 	_id.drop = map[? "drop"];
+	
+	_id.can_shoot = true;
 
 }
