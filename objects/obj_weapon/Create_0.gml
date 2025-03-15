@@ -64,6 +64,8 @@ ds_map_add(armas[4], "proj_penetration", 1);
 ds_map_add(armas[4], "automatic",false);
 ds_map_add(armas[4], "drop",obj_magnum);
 
+// criar mais armas
+
 
 weapon_id = noone;
 weapon_dir = noone;
