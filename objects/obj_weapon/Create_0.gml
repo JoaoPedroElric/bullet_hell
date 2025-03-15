@@ -16,7 +16,7 @@ armas[1] = ds_map_create();
 ds_map_add(armas[1], "sprite", spr_pistola);
 ds_map_add(armas[1], "proj", spr_bullet_pistola);
 ds_map_add(armas[1], "proj_spd", 10);
-ds_map_add(armas[1], "proj_damage", 5);
+ds_map_add(armas[1], "proj_damage", 6);
 ds_map_add(armas[1], "proj_delay", 25);
 ds_map_add(armas[1], "proj_count", 1);
 ds_map_add(armas[1], "proj_disp", 1);

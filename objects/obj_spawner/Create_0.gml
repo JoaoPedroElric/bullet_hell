@@ -1,3 +1,5 @@
-wave_count = 0;
-start_wave = true;
-wave_enemys = 10
+wave = 1;              
+enemies_per_wave = 8;  
+spawned_enemies = 0;
+waiting_for_input = true; 
+life_default = 4;

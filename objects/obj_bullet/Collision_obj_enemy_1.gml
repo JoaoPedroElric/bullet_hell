@@ -1,2 +1,2 @@
 instance_destroy();
-other.life -= damage;
+other.life_enemy -= damage;
