@@ -1,0 +1,2 @@
+hit_damage();
+	
