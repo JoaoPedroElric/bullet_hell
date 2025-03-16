@@ -2,12 +2,12 @@
 
 if(instance_exists(weapon_id)){
 
-			show_debug_message("Proj: " + string(proj));
-			show_debug_message("Proj Speed: " + string(proj_spd));
-			show_debug_message("Proj Damage: " + string(proj_damage));
-			show_debug_message("Proj Delay: " + string(proj_delay));
 
 
+	if(keyboard_check_pressed(ord("F"))) {
+		upgrade_weapon(5, 1);
+	}
+	
 	x = weapon_id.x + 2;
 	y = weapon_id.y+ 1;
 	
@@ -17,31 +17,33 @@ if(instance_exists(weapon_id)){
 	weapon_y = y + lengthdir_y(2, weapon_dir);
 	
 	
-	function shoot() {
-		if(!can_shoot) {
-			return false;	
-		}
-		
-		for(var i = 0; i < proj_count; i++) {
-			var fire = instance_create_layer(weapon_x+lengthdir_x(14,weapon_dir),weapon_y+lengthdir_y(14,weapon_dir), "bullet",obj_bullet);
-			fire.sprite_index = proj;
-			var dir = weapon_dir + (proj_disp * i);
-			fire.speed = proj_spd;
-			fire.image_angle = dir;
-			fire.direction = dir;
-			fire.damage = proj_damage;
-		}
-		
-		can_shoot = false;
-		alarm[0] = proj_delay;
-				
-	}
+function shoot() {
+    if (!can_shoot) return false;
+
+    for (var i = 0; i < weapon_stats[5]; i++) { // proj_count
+        var fire = instance_create_layer(
+            weapon_x + lengthdir_x(14, weapon_dir),
+            weapon_y + lengthdir_y(14, weapon_dir),
+            "bullet",
+            obj_bullet
+        );
+        fire.sprite_index = weapon_stats[1]; 
+        var dir = weapon_dir + (weapon_stats[6] * i);
+        fire.speed = weapon_stats[2]; 
+        fire.image_angle = dir;
+        fire.direction = dir;
+        fire.damage = weapon_stats[3]; 
+    }
+
+    can_shoot = false;
+    alarm[0] = weapon_stats[4]; 
+}
 	
 	function weapon_drop() {
 		if(!weapon > 0) {
 			return false;	
 		}
-		var inst = instance_create_layer(weapon_x,weapon_y,layer,drop);
+		var inst = instance_create_layer(weapon_x,weapon_y,layer,weapon_stats[9]);
 		inst.image_angle = weapon_dir;
 		inst.direction = weapon_dir;
 		inst.speed = 5;

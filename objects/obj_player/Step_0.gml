@@ -21,7 +21,7 @@ if(key_right) x = x+move_speed;
 with(my_weapon) {
 	var key_drop = keyboard_check_pressed(ord("E"));
 	var mb;
-	if(automatic){
+	if(weapon_stats[8]){
 		mb = mouse_check_button(mb_left);	
 	} else {
 		mb = mouse_check_button_pressed(mb_left);	

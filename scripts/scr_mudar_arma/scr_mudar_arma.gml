@@ -1,18 +1,25 @@
-function mudar_arma(_id,index){
-	
-	weapon = index;
-	var map = _id.armas[_id.weapon];
-	_id.sprite = map[? "sprite"];
-	_id.proj = map[? "proj"];
-	_id.proj_spd = map[? "proj_spd"];
-	_id.proj_damage = map[? "proj_damage"];
-	_id.proj_delay = map[? "proj_delay"];
-	_id.proj_count = map[? "proj_count"];
-	_id.proj_disp = map[? "proj_disp"];
-	_id.proj_penetration = map[? "proj_penetration"];
-	_id.automatic = map[? "automatic"];
-	_id.drop = map[? "drop"];
-	
-	_id.can_shoot = true;
+function mudar_arma(_id, index) {
+    _id.weapon = index;
 
+    var map = _id.armas[index];
+
+    _id.weapon_stats = [
+        map[? "sprite"],           // 0
+        map[? "proj"],             // 1
+        map[? "proj_spd"],         // 2
+        map[? "proj_damage"],      // 3
+        map[? "proj_delay"],       // 4
+        map[? "proj_count"],       // 5
+        map[? "proj_disp"],        // 6
+        map[? "proj_penetration"], // 7
+        map[? "automatic"],        // 8
+        map[? "drop"]              // 9
+    ];
+
+    _id.can_shoot = true;
+}
+
+function upgrade_weapon(_index, value) {
+
+    weapon_stats[_index] += value;
 }
