@@ -3,7 +3,9 @@ var key_down = keyboard_check(ord("S"));
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 
-show_debug_message("vida: " + string(life));
+
+
+
 if(life <= 0){
 	instance_destroy();	
 }

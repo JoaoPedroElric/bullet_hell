@@ -2,6 +2,12 @@
 
 if(instance_exists(weapon_id)){
 
+			show_debug_message("Proj: " + string(proj));
+			show_debug_message("Proj Speed: " + string(proj_spd));
+			show_debug_message("Proj Damage: " + string(proj_damage));
+			show_debug_message("Proj Delay: " + string(proj_delay));
+
+
 	x = weapon_id.x + 2;
 	y = weapon_id.y+ 1;
 	
@@ -49,11 +55,6 @@ if(instance_exists(weapon_id)){
 		var inst = instance_nearest(x,y,obj_weapon_drop);
 		if(instance_exists(inst)) {
 			mudar_arma(self,inst.weapon_index);
-			
-			show_debug_message("Proj: " + string(proj));
-			show_debug_message("Proj Speed: " + string(proj_spd));
-			show_debug_message("Proj Damage: " + string(proj_damage));
-			show_debug_message("Proj Delay: " + string(proj_delay));
 			
 			instance_destroy(inst);
 		}
