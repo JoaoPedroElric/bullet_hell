@@ -1,3 +1,5 @@
+global.weapon_upgrades = ds_map_create();
+
 move_speed = 3;
 life_max = 10;
 life = life_max;

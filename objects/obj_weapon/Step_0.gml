@@ -20,15 +20,15 @@ if(instance_exists(weapon_id)){
 function shoot() {
     if (!can_shoot) return false;
 
-    for (var i = 0; i < weapon_stats[5]; i++) { // proj_count
-        var fire = instance_create_layer(
-            weapon_x + lengthdir_x(14, weapon_dir),
-            weapon_y + lengthdir_y(14, weapon_dir),
-            "bullet",
-            obj_bullet
-        );
+    for (var i = 0; i < weapon_stats[5]; i++) { 
+        var fire = instance_create_layer(weapon_x + lengthdir_x(14, weapon_dir), weapon_y + lengthdir_y(14, weapon_dir),"bullet",obj_bullet);
         fire.sprite_index = weapon_stats[1]; 
         var dir = weapon_dir + (weapon_stats[6] * i);
+		
+		if(weapon_stats[5] > 1) {
+			dir -= (weapon_stats[6] * (weapon_stats[5] - 1)) / 2;
+		}
+		
         fire.speed = weapon_stats[2]; 
         fire.image_angle = dir;
         fire.direction = dir;
