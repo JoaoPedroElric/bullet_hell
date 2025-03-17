@@ -4,12 +4,15 @@ if(instance_exists(weapon_id)){
 
 
 
+	if(keyboard_check_pressed(ord("0"))) {
+		global.upgrade_max += 1;
+	}
 	if(keyboard_check_pressed(ord("1"))) {
-		upgrade_weapon(weapon_id, 5, 1);
+		check_upgrade(weapon_id, 5, 1);
 	}
 	
 	if(keyboard_check_pressed(ord("2"))) {
-		upgrade_weapon(weapon_id, 3, 1);
+		check_upgrade(weapon_id, 3, 1);
 	}
 	
 	x = weapon_id.x + 2;

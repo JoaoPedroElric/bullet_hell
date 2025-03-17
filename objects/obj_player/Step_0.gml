@@ -6,7 +6,7 @@ var key_right = keyboard_check(ord("D"));
 
 
 
-if(life <= 0){
+if(global.life <= 0){
 	instance_destroy();	
 }
 

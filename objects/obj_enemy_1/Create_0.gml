@@ -10,7 +10,7 @@ hit_tick = room_speed * 2;
 function hit_damage() {
 	if(hit) return;
 		hit = true;
-		obj_player.life -= damage_enemy;
+		global.life -= damage_enemy;
 		
 		
 		alarm[0] = hit_tick;

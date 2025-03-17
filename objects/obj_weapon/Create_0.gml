@@ -12,6 +12,7 @@ ds_map_add(armas[0], "automatic",false);
 ds_map_add(armas[0], "drop", -1);
 
 
+
 // pistola
 armas[1] = ds_map_create();
 ds_map_add(armas[1], "sprite", spr_pistola);
