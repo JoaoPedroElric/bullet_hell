@@ -4,8 +4,12 @@ if(instance_exists(weapon_id)){
 
 
 
-	if(keyboard_check_pressed(ord("F"))) {
-		upgrade_weapon(5, 1);
+	if(keyboard_check_pressed(ord("1"))) {
+		upgrade_weapon(weapon_id, 5, 1);
+	}
+	
+	if(keyboard_check_pressed(ord("2"))) {
+		upgrade_weapon(weapon_id, 3, 1);
 	}
 	
 	x = weapon_id.x + 2;

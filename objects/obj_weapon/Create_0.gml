@@ -44,7 +44,7 @@ ds_map_add(armas[3], "sprite",spr_shotgun);
 ds_map_add(armas[3], "proj",spr_bullet_shotgun);
 ds_map_add(armas[3], "proj_spd",15);
 ds_map_add(armas[3], "proj_damage",15);
-ds_map_add(armas[3], "proj_delay",60);
+ds_map_add(armas[3], "proj_delay",40);
 ds_map_add(armas[3], "proj_count",3);
 ds_map_add(armas[3], "proj_disp", 15);
 ds_map_add(armas[3], "proj_penetration", 0);
@@ -57,7 +57,7 @@ ds_map_add(armas[4], "sprite",spr_magnum);
 ds_map_add(armas[4], "proj",spr_bullet_magnum);
 ds_map_add(armas[4], "proj_spd",18);
 ds_map_add(armas[4], "proj_damage",20);
-ds_map_add(armas[4], "proj_delay",60);
+ds_map_add(armas[4], "proj_delay",40);
 ds_map_add(armas[4], "proj_count",1);
 ds_map_add(armas[4], "proj_disp", 15);
 ds_map_add(armas[4], "proj_penetration", 1);
@@ -65,7 +65,10 @@ ds_map_add(armas[4], "automatic",false);
 ds_map_add(armas[4], "drop",obj_magnum);
 
 // criar mais armas
-
+global.up = 3;
+global.weapon_upgrades = ds_map_create();  // Armazena os upgrades aplicados a cada arma
+global.weapon_upgrade_count = ds_map_create(); // Contador de upgrades por arma
+global.upgrade_max = 3; // Limite de upgrades por arma
 
 weapon_id = noone;
 weapon_dir = noone;

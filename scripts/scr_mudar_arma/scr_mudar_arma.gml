@@ -2,15 +2,21 @@ function mudar_arma(_id, index) {
     _id.weapon = index;
     var map = _id.armas[index];
 
-    // Se a arma já foi melhorada antes, mantém os upgrades
+    // Se a arma não tem uma lista de upgrades, cria uma
     if (!ds_map_exists(global.weapon_upgrades, index)) {
         ds_map_add(global.weapon_upgrades, index, ds_list_create());
     }
 
-    // Criar weapon_stats com valores iniciais
+    // Inicializar o contador de upgrades para a arma, se necessário
+    if (!ds_map_exists(global.weapon_upgrade_count, index)) {
+        ds_map_add(global.weapon_upgrade_count, index, 0);
+    }
+
+
+    // Criar `weapon_stats` com valores iniciais da arma
     _id.weapon_stats = [
-        map[? "sprite"],			   // 0
-        map[? "proj"],				   // 1
+        map[? "sprite"],               // 0
+        map[? "proj"],                 // 1
         map[? "proj_spd"],             // 2
         map[? "proj_damage"],          // 3
         map[? "proj_delay"],           // 4
@@ -21,8 +27,8 @@ function mudar_arma(_id, index) {
         map[? "drop"]                  // 9
     ];
 
-    // Aplicar os upgrades da arma se existirem
-    var upgrades = global.weapon_upgrades[? index];
+    // Aplicar upgrades existentes
+    var upgrades = ds_map_find_value(global.weapon_upgrades, index);
     var size = ds_list_size(upgrades);
     for (var i = 0; i < size; i++) {
         var upgrade = upgrades[| i];
@@ -32,11 +38,23 @@ function mudar_arma(_id, index) {
     _id.can_shoot = true;
 }
 
-function upgrade_weapon(_index, value) {
-	// aplicar upgrade
-    weapon_stats[_index] += value;
+function upgrade_weapon(arma, _index, value) {
+	
+    // Obtém o contador de upgrades da arma
+    var current_count = ds_map_find_value(global.weapon_upgrade_count, arma);
 
-    // Salvar o upgrade aplicado
-    var upgrades = global.weapon_upgrades[? weapon];
-    ds_list_add(upgrades, [_index, value]);
+    // Verifica se o limite de upgrades já foi atingido
+    if (current_count < 3) {
+        // Aplica o upgrade na arma
+        weapon_stats[_index] += value;
+
+        // Salva o upgrade na lista da arma
+        var upgrades = ds_map_find_value(global.weapon_upgrades, arma);
+        ds_list_add(upgrades, [_index, value]);
+
+        // Atualiza o contador de upgrades da arma
+        ds_map_replace(global.weapon_upgrade_count, arma, current_count + 1);
+    } else {
+        show_message("Essa arma já recebeu o máximo de upgrades!");
+    }
 }

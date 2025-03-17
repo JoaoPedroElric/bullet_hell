@@ -34,10 +34,12 @@
   },
   "name":"BLANK GAME_1",
   "resources":[
+    {"id":{"name":"ft_GUI","path":"fonts/ft_GUI/ft_GUI.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_card","path":"objects/obj_card/obj_card.yy",},},
     {"id":{"name":"obj_enemy_1","path":"objects/obj_enemy_1/obj_enemy_1.yy",},},
     {"id":{"name":"obj_enemy_spawn","path":"objects/obj_enemy_spawn/obj_enemy_spawn.yy",},},
+    {"id":{"name":"obj_GUI","path":"objects/obj_GUI/obj_GUI.yy",},},
     {"id":{"name":"obj_magnum","path":"objects/obj_magnum/obj_magnum.yy",},},
     {"id":{"name":"obj_pistola","path":"objects/obj_pistola/obj_pistola.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
