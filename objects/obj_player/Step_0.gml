@@ -8,6 +8,7 @@ var key_right = keyboard_check(ord("D"));
 
 if(global.life <= 0){
 	instance_destroy();	
+	room_restart();
 }
 
 if(key_up) y = y-move_speed;

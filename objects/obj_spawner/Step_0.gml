@@ -8,6 +8,9 @@ if (waiting_for_input && keyboard_check_pressed(vk_enter)) {
 	
 }
 
+if(wave > global.wave_max) {
+	global.wave_max = wave;	
+}
 
 // Se todos os inimigos morreram, permitir iniciar nova wave
 if (!waiting_for_input && instance_number(obj_enemy_1) == 0 && spawned_enemies >= enemies_per_wave) {
