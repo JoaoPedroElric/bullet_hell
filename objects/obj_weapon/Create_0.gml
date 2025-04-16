@@ -31,8 +31,8 @@ armas[2] = ds_map_create();
 ds_map_add(armas[2], "sprite", spr_uzi);
 ds_map_add(armas[2], "proj", spr_bullet_uzi);
 ds_map_add(armas[2], "proj_spd", 12);
-ds_map_add(armas[2], "proj_damage", 2);
-ds_map_add(armas[2], "proj_delay" , 5);
+ds_map_add(armas[2], "proj_damage", 3);
+ds_map_add(armas[2], "proj_delay" , 12);
 ds_map_add(armas[2], "proj_count", 1);
 ds_map_add(armas[2], "proj_disp", 10);
 ds_map_add(armas[2], "proj_penetration", 0);
@@ -77,5 +77,5 @@ weapon_x = 0;
 weapon_y = 0;
 can_shoot = true;
 
-mudar_arma(self,1);
+mudar_arma(self,0);
 

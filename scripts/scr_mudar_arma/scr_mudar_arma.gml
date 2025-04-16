@@ -73,7 +73,5 @@ function check_upgrade(arma, _index, value) {
 
         // Atualizar contador de upgrades da arma
         ds_map_replace(global.weapon_upgrade_count, arma, current_count + 1);
-    } else {
-        show_message("Essa arma já recebeu o máximo de upgrades!");
     }
 }
