@@ -3,6 +3,8 @@ life_enemy = obj_spawner.life_default;
 damage_enemy = obj_spawner.damage_dafault;
 spd = 1;
 
+escala_x = image_xscale;
+escala_y = image_yscale;
 
 hit = false;
 hit_tick = room_speed * 2;

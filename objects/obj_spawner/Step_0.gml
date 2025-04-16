@@ -17,4 +17,5 @@ if (!waiting_for_input && instance_number(obj_enemy_1) == 0 && spawned_enemies >
     waiting_for_input = true;
     
     enemies_per_wave *= 1.25; // Aumenta a quantidade de inimigos por wave
+	
 }
