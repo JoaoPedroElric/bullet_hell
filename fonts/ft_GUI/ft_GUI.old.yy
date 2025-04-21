@@ -1,11 +1,11 @@
 {
   "$GMFont":"",
-  "%Name":"ft_damage",
+  "%Name":"ft_GUI",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
   "ascenderOffset":0,
-  "bold":true,
+  "bold":false,
   "canGenerateBitmap":true,
   "charset":0,
   "first":0,
@@ -127,7 +127,7 @@
   "last":0,
   "lineHeight":17,
   "maintainGms1Font":false,
-  "name":"ft_damage",
+  "name":"ft_GUI",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",
@@ -144,10 +144,7 @@
   "sdfSpread":8,
   "size":12.0,
   "styleName":"Medium",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"",
   "usesSDF":false,
 }

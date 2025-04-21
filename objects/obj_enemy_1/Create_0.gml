@@ -1,6 +1,9 @@
 
 life_enemy = obj_spawner.life_default;
 damage_enemy = obj_spawner.damage_dafault;
+
+global.money_drop = 0;
+
 spd = 1;
 
 escala_x = image_xscale;
@@ -19,4 +22,3 @@ function hit_damage() {
 
 	
 }
-

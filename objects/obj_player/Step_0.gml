@@ -4,8 +4,6 @@ var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"));
 
 
-
-
 if(global.life <= 0){
 	instance_destroy();	
 	room_restart();

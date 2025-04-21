@@ -1,4 +1,6 @@
+global.card_up = 0;
 function mudar_arma(_id, index) {
+	global.arma = index;
     _id.weapon = index;
     var map = _id.armas[index];
 	
@@ -36,6 +38,9 @@ function mudar_arma(_id, index) {
     }
 
     _id.can_shoot = true;
+	
+	show_debug_message("scr_mudar arma, Arma trocada para: " + string(index));
+	show_debug_message("Sprite: " + string(_id.weapon_stats[0]));
 }
 
 function upgrade_weapon(_index, value) {

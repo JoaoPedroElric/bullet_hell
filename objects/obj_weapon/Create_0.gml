@@ -1,3 +1,4 @@
+
 // nada
 armas[0] = ds_map_create();
 ds_map_add(armas[0], "sprite", -1);
@@ -65,17 +66,26 @@ ds_map_add(armas[4], "proj_penetration", 1);
 ds_map_add(armas[4], "automatic",false);
 ds_map_add(armas[4], "drop",obj_magnum);
 
+
+valor_0 = 100;
+valor_1 = 15;
+valor_2 = 50;
+
 // criar mais armas
 global.up = 3;
 global.weapon_upgrades = ds_map_create();  // Armazena os upgrades aplicados a cada arma
 global.weapon_upgrade_count = ds_map_create(); // Contador de upgrades por arma
 global.upgrade_max = 3; // Limite de upgrades por arma
+global.id_wave = 0;
+global.arma = 0;
+upgrade_i = 3;
 
 weapon_id = noone;
 weapon_dir = noone;
 weapon_x = 0;
 weapon_y = 0;
 can_shoot = true;
-
-mudar_arma(self,0);
+arma_atual = noone;
+mudar_arma(self, global.arma);
+show_debug_message("obj_weapon criado");
 

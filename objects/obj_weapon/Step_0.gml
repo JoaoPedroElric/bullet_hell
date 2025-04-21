@@ -1,18 +1,41 @@
-
+if(global.card_up > 0) {
+	check_upgrade(weapon_id, 3, global.card_up);
+}
 
 if(instance_exists(weapon_id)){
+	//upgrades
+	if(global.upgrade) {
+		// chips de upgrades
+		if(keyboard_check_pressed(ord("0"))) {
+			
+			if(obj_player.sucata >= valor_0) {
+				global.upgrade_max += 1;
+				upgrade_i += 1;
+				obj_player.sucata -= valor_0;
+				valor_0 *= 1.4;
+			}
+			
+		}
+		if(keyboard_check_pressed(ord("1"))) {
+			
+			if(obj_player.sucata >= valor_1 && upgrade_i > 0) {
+				check_upgrade(weapon_id, 3, 1);
+				obj_player.sucata -= valor_1;
+				upgrade_i -= 1;
+				valor_1 *= 1.5;
+			}			
+			
+		}
+		if(keyboard_check_pressed(ord("2"))) {
 
-
-
-	if(keyboard_check_pressed(ord("0"))) {
-		global.upgrade_max += 1;
-	}
-	if(keyboard_check_pressed(ord("1"))) {
-		check_upgrade(weapon_id, 5, 1);
-	}
-	
-	if(keyboard_check_pressed(ord("2"))) {
-		check_upgrade(weapon_id, 3, 1);
+			if(obj_player.sucata >= valor_2 && upgrade_i > 0) {
+				check_upgrade(weapon_id, 4, -0.5);
+				obj_player.sucata -= valor_2;
+				upgrade_i -= 1;
+				valor_2 *= 1.2;
+			}	
+			
+		}
 	}
 	
 	x = weapon_id.x + 2;
@@ -64,7 +87,7 @@ function shoot() {
 		var inst = instance_nearest(x,y,obj_weapon_drop);
 		if(instance_exists(inst)) {
 			mudar_arma(self,inst.weapon_index);
-			
+			arma_atual = inst.weapon_index;
 			instance_destroy(inst);
 		}
 	}
@@ -72,6 +95,8 @@ function shoot() {
 } else {
 	instance_destroy();	
 }
+
+
 
 
 
