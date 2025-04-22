@@ -1,16 +1,16 @@
 
 // nada
 armas[0] = ds_map_create();
-ds_map_add(armas[0], "sprite", -1);
-ds_map_add(armas[0], "proj", noone);
-ds_map_add(armas[0], "proj_spd", 0);
-ds_map_add(armas[0], "proj_damage",0);
-ds_map_add(armas[0], "proj_delay", 0);
-ds_map_add(armas[0], "proj_count" ,0);
-ds_map_add(armas[0], "proj_disp", 1);
-ds_map_add(armas[0], "proj_penetration", 0);
-ds_map_add(armas[0], "automatic",false);
-ds_map_add(armas[0], "drop", -1);
+ds_map_add(armas[0], "sprite", -1);				//0
+ds_map_add(armas[0], "proj", noone);			//1
+ds_map_add(armas[0], "proj_spd", 0);			//2
+ds_map_add(armas[0], "proj_damage",0);			//3
+ds_map_add(armas[0], "proj_delay", 0);			//4
+ds_map_add(armas[0], "proj_count" ,0);			//5
+ds_map_add(armas[0], "proj_disp", 1);			//6
+ds_map_add(armas[0], "proj_penetration", 0);	//7
+ds_map_add(armas[0], "automatic",false);		//8
+ds_map_add(armas[0], "drop", -1);				//9
 
 
 
@@ -67,9 +67,10 @@ ds_map_add(armas[4], "automatic",false);
 ds_map_add(armas[4], "drop",obj_magnum);
 
 
-valor_0 = 100;
-valor_1 = 15;
-valor_2 = 50;
+valor_0 = 0;
+valor_dano_pistol = 15;
+valor_dano_uzi = 40;
+valor_2 = 0;
 
 // criar mais armas
 global.up = 3;

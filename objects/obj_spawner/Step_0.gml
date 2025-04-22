@@ -5,7 +5,8 @@ if (waiting_for_input && keyboard_check_pressed(vk_enter)) {
     waiting_for_input = false;
 	spawned_enemies = 0;
 	alarm[0] = 1;
-	life_default *= 1.10;
+	life_default *= 1.15;
+	spd_default *= 1.2;
 	
 }
 

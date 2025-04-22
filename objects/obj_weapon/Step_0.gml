@@ -1,37 +1,41 @@
-if(global.card_up > 0) {
-	check_upgrade(weapon_id, 3, global.card_up);
-}
 
 if(instance_exists(weapon_id)){
+	
+	
 	//upgrades
 	if(global.upgrade) {
-		// chips de upgrades
-		if(keyboard_check_pressed(ord("0"))) {
-			
-			if(obj_player.sucata >= valor_0) {
-				global.upgrade_max += 1;
-				upgrade_i += 1;
-				obj_player.sucata -= valor_0;
-				valor_0 *= 1.4;
-			}
-			
-		}
+
 		if(keyboard_check_pressed(ord("1"))) {
-			
-			if(obj_player.sucata >= valor_1 && upgrade_i > 0) {
-				check_upgrade(weapon_id, 3, 1);
-				obj_player.sucata -= valor_1;
-				upgrade_i -= 1;
-				valor_1 *= 1.5;
-			}			
+			// dano
+			switch (global.arma) {
+				// limite de dano pra pistola.
+				case 1:
+				
+				if(obj_player.sucata >= valor_dano_pistol && weapon_stats[3] < 12) {
+					check_upgrade(weapon_id, 3, 1);
+					obj_player.sucata -= valor_dano_pistol;
+					
+					valor_dano_pistol *= 1.5;
+				}
+				break;
+				
+				//limite ded dano pra uzi.
+				case 2:
+				if(obj_player.sucata >= valor_dano_uzi && weapon_stats[3] < 6) {
+					check_upgrade(weapon_id, 3, 1);
+					obj_player.sucata -= valor_dano_uzi;
+					
+					valor_dano_uzi *= 2;
+				}
+				break;
+			}
 			
 		}
 		if(keyboard_check_pressed(ord("2"))) {
 
-			if(obj_player.sucata >= valor_2 && upgrade_i > 0) {
+			if(obj_player.sucata >= valor_2) {
 				check_upgrade(weapon_id, 4, -0.5);
 				obj_player.sucata -= valor_2;
-				upgrade_i -= 1;
 				valor_2 *= 1.2;
 			}	
 			

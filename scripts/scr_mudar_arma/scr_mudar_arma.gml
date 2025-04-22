@@ -4,7 +4,6 @@ function mudar_arma(_id, index) {
     _id.weapon = index;
     var map = _id.armas[index];
 	
-
     // Se a arma não tem uma lista de upgrades, cria uma
     if (!ds_map_exists(global.weapon_upgrades, index)) {
         ds_map_add(global.weapon_upgrades, index, ds_list_create());
@@ -32,15 +31,8 @@ function mudar_arma(_id, index) {
         _id.weapon_stats[upgrade[0]] += upgrade[1];
     }
 
-    // Se a arma não tem contador de upgrades, inicializa com 0
-    if (!ds_map_exists(global.weapon_upgrade_count, index)) {
-        ds_map_add(global.weapon_upgrade_count, index, 0);
-    }
-
     _id.can_shoot = true;
-	
-	show_debug_message("scr_mudar arma, Arma trocada para: " + string(index));
-	show_debug_message("Sprite: " + string(_id.weapon_stats[0]));
+
 }
 
 function upgrade_weapon(_index, value) {
@@ -59,24 +51,7 @@ function check_upgrade(arma, _index, value) {
     if (!ds_map_exists(global.weapon_upgrades, arma)) {
         ds_map_add(global.weapon_upgrades, arma, ds_list_create());
     }
-    
-    // Se a arma não tem um contador de upgrades, inicializa com 0
-    if (!ds_map_exists(global.weapon_upgrade_count, arma)) {
-        ds_map_add(global.weapon_upgrade_count, arma, 0);
-    }
 
-    // Obtém a quantidade atual de upgrades aplicados na arma
-    var current_count = ds_map_find_value(global.weapon_upgrade_count, arma);
-
-    // Se ainda há espaço para upgrades, aplica
-    if (current_count < global.upgrade_max) {
         upgrade_weapon(_index, value);
 
-        // Salvar o upgrade aplicado
-        var upgrades = ds_map_find_value(global.weapon_upgrades, arma);
-        ds_list_add(upgrades, [_index, value]);
-
-        // Atualizar contador de upgrades da arma
-        ds_map_replace(global.weapon_upgrade_count, arma, current_count + 1);
-    }
 }
