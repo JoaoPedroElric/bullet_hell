@@ -5,7 +5,7 @@ if (!variable_global_exists("wave_max")) {
 }
 
 global.upgrade = false;
-enemies_per_wave = 2;  
+enemies_per_wave = 12;  
 spawned_enemies = 0;
 waiting_for_input = true; 
 life_default = 4;

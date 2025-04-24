@@ -21,7 +21,7 @@ if(instance_exists(weapon_id)){
 				
 				//limite ded dano pra uzi.
 				case 2:
-				if(obj_player.sucata >= valor_dano_uzi && weapon_stats[3] < 6) {
+				if(obj_player.sucata >= valor_dano_uzi && weapon_stats[3] < 7) {
 					check_upgrade(weapon_id, 3, 1);
 					obj_player.sucata -= valor_dano_uzi;
 					
@@ -31,14 +31,25 @@ if(instance_exists(weapon_id)){
 			}
 			
 		}
+		// Velocidade de ataque
 		if(keyboard_check_pressed(ord("2"))) {
-
-			if(obj_player.sucata >= valor_2) {
-				check_upgrade(weapon_id, 4, -0.5);
-				obj_player.sucata -= valor_2;
-				valor_2 *= 1.2;
-			}	
+			switch(global.arma) {
+				case 1:
+				if(obj_player.sucata >= valor_spd_pistol && weapon_stats[4] > 19) {
+					check_upgrade(weapon_id, 4, -0.5);
+					obj_player.sucata -= valor_spd_pistol;
+					valor_spd_pistol *= 1.2;
+				}
+				break;
+				case 2:
+				if(obj_player.sucata >= valor_spd_uzi && weapon_stats[4] > 6) {
+					check_upgrade(weapon_id, 4, -0.5);
+					obj_player.sucata -= valor_spd_uzi;
+					valor_spd_uzi *= 1.2;
+				}
+				break;
 			
+			}
 		}
 	}
 	

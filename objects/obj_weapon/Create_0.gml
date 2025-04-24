@@ -32,7 +32,7 @@ armas[2] = ds_map_create();
 ds_map_add(armas[2], "sprite", spr_uzi);
 ds_map_add(armas[2], "proj", spr_bullet_uzi);
 ds_map_add(armas[2], "proj_spd", 12);
-ds_map_add(armas[2], "proj_damage", 3);
+ds_map_add(armas[2], "proj_damage", 2);
 ds_map_add(armas[2], "proj_delay" , 12);
 ds_map_add(armas[2], "proj_count", 1);
 ds_map_add(armas[2], "proj_disp", 10);
@@ -68,8 +68,12 @@ ds_map_add(armas[4], "drop",obj_magnum);
 
 
 valor_0 = 0;
+
 valor_dano_pistol = 15;
 valor_dano_uzi = 40;
+
+valor_spd_pistol = 35;
+valor_spd_uzi = 60;
 valor_2 = 0;
 
 // criar mais armas

@@ -6,7 +6,7 @@ global.id_wave = 0;
 global.arma = 0
 global.sucata = 0;
 global.kill = 0;
-sucata = 10000000;
+sucata = 100000000;
 
 arma_criada = false;
 
