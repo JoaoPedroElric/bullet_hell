@@ -19,6 +19,8 @@
   "height":128,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"4ba7373c-1c41-41f7-946e-ff3409e9c2ee","blendMode":0,"displayName":"Layer 2","isLocked":false,"name":"4ba7373c-1c41-41f7-946e-ff3409e9c2ee","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"cba64f3f-1924-4c6d-8475-b7a3ce5b0ed9","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"cba64f3f-1924-4c6d-8475-b7a3ce5b0ed9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"dcc8b35e-ce32-4e47-af84-20ce008bebb8","blendMode":0,"displayName":"default","isLocked":false,"name":"dcc8b35e-ce32-4e47-af84-20ce008bebb8","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_botao",

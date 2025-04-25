@@ -1,11 +1,13 @@
 
 if(instance_exists(weapon_id)){
 	
+function test_up() {
 	
+
 	//upgrades
 	if(global.upgrade) {
 
-		if(keyboard_check_pressed(ord("1"))) {
+		//if(keyboard_check_pressed(ord("1"))) {
 			// dano
 			switch (global.arma) {
 				// limite de dano pra pistola.
@@ -30,7 +32,7 @@ if(instance_exists(weapon_id)){
 				break;
 			}
 			
-		}
+		//}
 		// Velocidade de ataque
 		if(keyboard_check_pressed(ord("2"))) {
 			switch(global.arma) {
@@ -52,6 +54,8 @@ if(instance_exists(weapon_id)){
 			}
 		}
 	}
+}	
+
 	
 	x = weapon_id.x + 2;
 	y = weapon_id.y+ 1;

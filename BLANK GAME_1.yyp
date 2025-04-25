@@ -37,6 +37,7 @@
   "resources":[
     {"id":{"name":"ft_damage","path":"fonts/ft_damage/ft_damage.yy",},},
     {"id":{"name":"ft_GUI","path":"fonts/ft_GUI/ft_GUI.yy",},},
+    {"id":{"name":"ft_loja","path":"fonts/ft_loja/ft_loja.yy",},},
     {"id":{"name":"obj_botao","path":"objects/obj_botao/obj_botao.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_cursor","path":"objects/obj_cursor/obj_cursor.yy",},},
