@@ -8,8 +8,8 @@
   "name":"obj_mira",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"outros",
+    "path":"folders/Objects/outros.yy",
   },
   "parentObjectId":null,
   "persistent":false,

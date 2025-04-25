@@ -70,7 +70,7 @@ ds_map_add(armas[4], "drop",obj_magnum);
 valor_0 = 0;
 
 valor_dano_pistol = 15;
-valor_dano_uzi = 40;
+valor_dano_uzi = 20;
 
 valor_spd_pistol = 35;
 valor_spd_uzi = 60;

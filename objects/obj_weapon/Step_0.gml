@@ -1,13 +1,13 @@
 
 if(instance_exists(weapon_id)){
 	
-function test_up() {
+function test_up(valor) {
 	
 
 	//upgrades
 	if(global.upgrade) {
 
-		//if(keyboard_check_pressed(ord("1"))) {
+		if(valor == 1) {
 			// dano
 			switch (global.arma) {
 				// limite de dano pra pistola.
@@ -27,14 +27,14 @@ function test_up() {
 					check_upgrade(weapon_id, 3, 1);
 					obj_player.sucata -= valor_dano_uzi;
 					
-					valor_dano_uzi *= 2;
+					valor_dano_uzi *= 2.5;
 				}
 				break;
 			}
 			
-		//}
+		}
 		// Velocidade de ataque
-		if(keyboard_check_pressed(ord("2"))) {
+		if(valor == 2) {
 			switch(global.arma) {
 				case 1:
 				if(obj_player.sucata >= valor_spd_pistol && weapon_stats[4] > 19) {
